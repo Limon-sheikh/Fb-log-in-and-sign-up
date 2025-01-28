@@ -1,6 +1,4 @@
 
-
-
 const FbLogoAndText = () => {
     return (
         <div className="relative top-[23%]">
