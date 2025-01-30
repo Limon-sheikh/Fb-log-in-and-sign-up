@@ -1,14 +1,21 @@
 import { FaPlus } from "react-icons/fa6";
 import { IoPlayOutline } from "react-icons/io5";
+import i18n from "i18next";
 
 const LangAndOtherService = () => {
+
+
+    const LanguageChange = (lang) =>{
+        i18n.changeLanguage(lang);
+    }
+    
     return (
         <div>
             <div id="language" className="bg-white w-[972px] mx-auto text-[12px] text-[#8D949E]">
                 <div className="py-2">
                     <ul className="p-0 m-0 flex font-custom ">
-                        <li>English (UK)</li>
-                        <li><a href="#" className="pl-[10px] hover:underline">বাংলা</a></li>
+                        <li><a href="#" onClick={() => LanguageChange('en')} >English (UK)</a></li>
+                        <li><a href="#" onClick={() => LanguageChange('bn')} className="pl-[10px] hover:underline">বাংলা</a></li>
                         <li><a href="#" className="pl-[10px] hover:underline">অসমীয়া</a></li>
                         <li><a href="#" className="pl-[10px] hover:underline">हिन्दी</a></li>
                         <li><a href="#" className="pl-[10px] hover:underline">नेपाली</a></li>
